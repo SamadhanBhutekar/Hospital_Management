@@ -4,6 +4,7 @@ import "./css/registration.css";
 import { useParams } from "react-router";
 import { useNavigate } from 'react-router-dom';
 import checkicon from '../logo/checkbox-icon.svg';
+import { BASE_URL } from "./config";
 
 function Registration() {
   const [isActive, setIsActive] = useState(true);
@@ -45,7 +46,7 @@ const handleIdNumberChange = async (e) =>
   setIdNumber(newIdNumber);
 
   if (idproof && newIdNumber.length > 4) { 
-    const response = await fetch(`http://localhost:4000/check_idproof?idproof=${idproof}&idnumber=${newIdNumber}`);
+    const response = await fetch(`${BASE_URL}/check_idproof?idproof=${idproof}&idnumber=${newIdNumber}`);
     const data = await response.json();
 
     if (data.exists) {
@@ -58,7 +59,7 @@ const handleIdNumberChange = async (e) =>
 const checkNumber = async (number, type) => {
 
   try {
-    let response = await fetch(`http://localhost:4000/check_patient?number=${number}`);
+    let response = await fetch(`${BASE_URL}/check_patient?number=${number}`);
     let data = await response.json();
 
     if (data.exists) {
@@ -101,7 +102,7 @@ const checkNumber = async (number, type) => {
     formData.append("idnumber", idnumber);
     formData.append("file", IdImage);
   
-    let result = await fetch("http://localhost:4000/patient_registration", {
+    let result = await fetch(`${BASE_URL}/patient_registration`, {
       method: "POST",
       body: formData,
     });
@@ -130,7 +131,7 @@ const checkNumber = async (number, type) => {
     formData.append("file", IdImage);
     formData.append("pid", id);
 
-    let result = await fetch("http://localhost:4000/add_attdent", {
+    let result = await fetch(`${BASE_URL}/add_attdent`, {
       method: "POST",
       body: formData,
     });

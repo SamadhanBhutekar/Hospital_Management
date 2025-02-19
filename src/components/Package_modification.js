@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import $ from 'jquery';
 import 'datatables.net';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import { BASE_URL } from "./config";
 function PackageModification() 
 {
   const [isActive, setIsActive] = useState(true);
@@ -18,7 +19,7 @@ function PackageModification()
 
   const fetchAttendance = async () => {
     try {
-      const response = await fetch('http://localhost:4000/report_list');
+      const response = await fetch(`${BASE_URL}/report_list`);
       const data = await response.json();
       setAttendanceData(data);
       const checkstatus = data.map((item) => item.checkStatus);
@@ -35,7 +36,7 @@ function PackageModification()
   useEffect(() => {
     const getattdencedata = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/get_attdent`);
+        const response = await fetch(`${BASE_URL}/get_attdent`);
         const data = await response.json();
         setRelationaldata(data);
         const gepatientData = data.map((item) => ({

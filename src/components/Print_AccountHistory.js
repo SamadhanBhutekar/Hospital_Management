@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import moment from "moment";
 import { useLocation } from "react-router-dom";
 import "react-tooltip/dist/react-tooltip.css";
+import { BASE_URL } from "./config";
 
 function Print_AccountHistory() {
   const [isActive, setIsActive] = useState(true);
@@ -32,7 +33,7 @@ function Print_AccountHistory() {
     const fetchPrintData = async () => {
       try {
         let response = await fetch(
-          `http://localhost:4000/print_transctiondetails/${id}`
+          `${BASE_URL}/print_transctiondetails/${id}`
         );
         let data = await response.json();
         if (Array.isArray(data) && data.length > 0) {
@@ -53,7 +54,7 @@ function Print_AccountHistory() {
   useEffect(() => {
     const pdata = async () => {
       const regisapi = await fetch(
-        `http://localhost:4000/attedentmodificationinfo/${id}`
+        `${BASE_URL}/attedentmodificationinfo/${id}`
       );
       const result = await regisapi.json();
       const Mobileno = result.prinumber;
@@ -106,7 +107,7 @@ function Print_AccountHistory() {
 
   const fetchTransactionData = async () => {
     try {
-      const response = await fetch("http://localhost:4000/report_transction");
+      const response = await fetch(`${BASE_URL}/report_transction`);
       const data = await response.json();
       if (data && Array.isArray(data) && data.length > 0) {
         let prid = data[0]?.resid || "No resid found";
@@ -121,7 +122,7 @@ function Print_AccountHistory() {
   const Modificationdata = async () => {
     try {
       const response = await fetch(
-        `http://localhost:4000/Package_modificationData/${id}`
+        `${BASE_URL}/Package_modificationData/${id}`
       );
       const data = await response.json();
       let getpackagePrice = data.packagePrice;

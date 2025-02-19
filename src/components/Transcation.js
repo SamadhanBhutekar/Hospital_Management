@@ -4,6 +4,7 @@ import maleimg from "../logo/malelogo.svg";
 import femalimg from "../logo/femalelogo.svg";
 import notfound from "../logo/notfound.svg";
 import { Link } from "react-router-dom";
+import { BASE_URL } from "./config";
 
 function Transcation() {
   const [isActive, setIsActive] = useState(true);
@@ -24,7 +25,7 @@ function Transcation() {
 
     try {
       const response = await fetch(
-        `http://localhost:4000/transaction/${encodeURIComponent(search)}`
+        `${BASE_URL}/transaction/${encodeURIComponent(search)}`
       );
       const result = await response.json();
 

@@ -5,6 +5,7 @@ import moment from 'moment'
 import { Link } from "react-router";
 import { useLocation } from "react-router-dom";
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import { BASE_URL } from "./config";
 
 function CheckIn_AccountHistrory() 
 {
@@ -31,10 +32,10 @@ function CheckIn_AccountHistrory()
       const currentDate = moment().format("DD MMM YYYY"); 
       setCurrendate(currentDate);
       try {
-        let checkialldata = await fetch(`http://localhost:4000/checkin_transctiondetails`);
+        let checkialldata = await fetch(`${BASE_URL}/checkin_transctiondetails`);
         let chckindalldata = await checkialldata.json();
 
-        let chcksingleData = await fetch(`http://localhost:4000/checkin_transctiondetails/${id}`);
+        let chcksingleData = await fetch(`${BASE_URL}/checkin_transctiondetails/${id}`);
         let chcecktransactionDetails = await chcksingleData.json();
   
         if (!Array.isArray(chckindalldata) || !chcecktransactionDetails.patientid) {
@@ -62,7 +63,7 @@ function CheckIn_AccountHistrory()
   useEffect(() => {
     const fetchModificationData = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/Package_modificationData/${id}`);
+        const response = await fetch(`${BASE_URL}/Package_modificationData/${id}`);
         const data = await response.json();
         setStatus(data.status || ""); // Ensure status is always defined
       } catch (error) {

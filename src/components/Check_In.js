@@ -5,7 +5,8 @@ import maleimg from '../logo/malelogo.svg';
 import femalimg from '../logo/femalelogo.svg';
 import checkicon from '../logo/checkbox-icon.svg'
 import { useNavigate } from "react-router";
-import "./css/card.css"
+import "./css/card.css";
+import { BASE_URL } from "./config";
 
 const CheckIn = () => {
   const [checkdata, setCheckdata] = useState([]); 
@@ -27,7 +28,7 @@ const CheckIn = () => {
   useEffect(() => {
     const fetchPatientData = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/checkin/${resid}`);
+        const response = await fetch(`${BASE_URL}/checkin/${resid}`);
         if (!response.ok) throw new Error("Failed to fetch data");
 
         const result = await response.json();
@@ -65,7 +66,7 @@ const CheckIn = () => {
   const handleCheckIn = async ()  =>
   {
     const checkStatus = "Check In";
-    let addcheckindata = await fetch(`http://localhost:4000/add_checkin/${resid}`,
+    let addcheckindata = await fetch(`${BASE_URL}/add_checkin/${resid}`,
     {
        method:"PUT",
        body: JSON.stringify({ checkStatus}),
@@ -89,7 +90,7 @@ const CheckIn = () => {
   useEffect(() => {
       const getattdencedata = async () => {
         try {
-          const response = await fetch(`http://localhost:4000/get_attdent`);
+          const response = await fetch(`${BASE_URL}/get_attdent`);
           const data = await response.json();
           const latestPatientName = data
           .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)) 
@@ -107,7 +108,7 @@ const CheckIn = () => {
     useEffect(() => {
       const patientdata = async () => {
         try {
-          const response2 = await fetch(`http://localhost:4000/search_registration/${id}`);
+          const response2 = await fetch(`${BASE_URL}/search_registration/${id}`);
           const data = await response2.json();
           const gender = data.map((item) => item.gender)[0];
           console.log(gender)

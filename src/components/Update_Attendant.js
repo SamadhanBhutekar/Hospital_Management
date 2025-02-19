@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Sidebar from "./Sidebar";
 import { useParams, Link } from "react-router-dom";
 import { useNavigate } from "react-router";
+import { BASE_URL } from "../components/config";
 
 function Update_Attendant() {
   const [isActive, setIsActive] = useState(true);
@@ -28,7 +29,7 @@ function Update_Attendant() {
 
     const fetchAttendants = async () => {
       try {
-        let response = await fetch("http://localhost:4000/patientdata");
+        let response = await fetch(`${BASE_URL}/patientdata`);
         let result = await response.json();
         const filteredAttendants = result.filter(
           (item) => String(item.pid) === String(id)
@@ -44,7 +45,7 @@ function Update_Attendant() {
 
   const handleSave = async () => {
     const response = await fetch(
-      `http://localhost:4000/update-attendant/${selectedAttendant._id}`,
+      `${BASE_URL}/update-attendant/${selectedAttendant._id}`,
       {
         method: "PUT",
         headers: {

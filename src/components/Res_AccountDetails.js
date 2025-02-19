@@ -6,6 +6,7 @@ import femalimg from '../logo/femalelogo.svg';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import { Link } from 'react-router';
 import moment from 'moment';
+import { BASE_URL } from "./config";
 
 function Res_AccountDetails() {
   const [isActive, setIsActive] = useState(true);
@@ -28,7 +29,7 @@ function Res_AccountDetails() {
   {
     const fetchHistory = async () => 
     {
-      const response = await fetch(`http://localhost:4000/transactionHistory/${id}`);
+      const response = await fetch(`${BASE_URL}/transactionHistory/${id}`);
       const data = await response.json();
       setTransactionData(data);
     } 
@@ -38,7 +39,7 @@ function Res_AccountDetails() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/checkin_transctiondetails/${id}`);
+        const response = await fetch(`${BASE_URL}/checkin_transctiondetails/${id}`);
         const result = await response.json();
         setTransData(Array.isArray(result) ? result : [result]);
         setPatiebtid(result._id);
@@ -66,7 +67,7 @@ function Res_AccountDetails() {
       if (stopFetching) return; 
 
       try {
-        const response = await fetch(`http://localhost:4000/checkout_settelment/${pid}`);
+        const response = await fetch(`${BASE_URL}/checkout_settelment/${pid}`);
         if (!response.ok) {
           if (response.status === 404) {
             setPaySettdata([]); 

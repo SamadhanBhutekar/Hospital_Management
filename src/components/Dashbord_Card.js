@@ -3,6 +3,7 @@ import generalbed from "../logo/generalbed.png";
 import semibed from "../logo/semibed.png";
 import specialbed from "../logo/specialbed.png";
 import React, { useState, useEffect } from 'react';
+import { BASE_URL } from "./config";
 function Dashbord_Card() 
 {
 
@@ -19,7 +20,7 @@ function Dashbord_Card()
   
   const getdata = async () => {
   try {
-    const response = await fetch("http://localhost:4000/reservation_charges");
+    const response = await fetch(`${BASE_URL}/reservation_charges`);
     
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -57,7 +58,7 @@ function Dashbord_Card()
 
 const packagedata = async () => {
   try {
-    const response = await fetch("http://localhost:4000/Package_modification");
+    const response = await fetch(`${BASE_URL}/Package_modification`);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
@@ -76,7 +77,7 @@ const packagedata = async () => {
 
 const packgeModify = async () => {
   try {
-    const response = await fetch("http://localhost:4000/Package_modification");
+    const response = await fetch(`${BASE_URL}/Package_modification`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -120,8 +121,6 @@ const packgeModify = async () => {
     console.error("Error fetching package modification data:", error);
   }
 };
-
-
   useEffect(() => {
     getdata();
     packagedata();

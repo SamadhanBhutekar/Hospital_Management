@@ -3,7 +3,8 @@ import Sidebar from "./Sidebar";
 import { useNavigate, useParams } from "react-router-dom";
 import checkicon from '../logo/checkbox-icon.svg'
 import { Link } from "react-router";
-import moment from 'moment'
+import moment from 'moment';
+import { BASE_URL } from "./config";
 
 function Package_Reservatin_Charges() {
   const [isActive, setIsActive] = useState(true);
@@ -43,7 +44,7 @@ function Package_Reservatin_Charges() {
   useEffect(() => {
   const packagedata = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/package_data/${id}`);
+      const response = await fetch(`${BASE_URL}/package_data/${id}`);
       const data = await response.json();
       const latestRoom = data.reduce((latest, current) => {
         return new Date(current.EntryDate) > new Date(latest.EntryDate) ? current : latest;
@@ -59,7 +60,7 @@ function Package_Reservatin_Charges() {
   useEffect(() => {
     const getdata = async () => 
     {
-        const fetchdata = await fetch(`http://localhost:4000/print_transctiondetails/${id}`);
+        const fetchdata = await fetch(`${BASE_URL}/print_transctiondetails/${id}`);
         const response = await fetchdata.json();
         const RoomCat = response.map((item)=>item.RoomCategory)[0];
         const totalAmt = response.map((item)=>item.totalAmount)[0];
@@ -72,7 +73,7 @@ function Package_Reservatin_Charges() {
 
   useEffect(() => {
     const patientdata = async () => {
-      const getdata = await fetch(`http://localhost:4000/res_charges/${id}`);
+      const getdata = await fetch(`${BASE_URL}/res_charges/${id}`);
       const result = await getdata.json();
 
       if (result.length > 0) {
@@ -296,7 +297,7 @@ const submit = async () => {
     };
 
   try {
-    const resrvationdata = await fetch("http://localhost:4000/packagemodification", {
+    const resrvationdata = await fetch(`${BASE_URL}/packagemodification`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -320,7 +321,7 @@ const handleCloseModal = () => {
 useEffect(() => {
   const patienreg = async () => 
   {
-      const fetchdata = await fetch(`http://localhost:4000/checkin_transctiondetails`);
+      const fetchdata = await fetch(`${BASE_URL}/checkin_transctiondetails`);
       const response = await fetchdata.json();
       const GetAssignno = response.map((item)=>item.AssignBedno);
      setGetAssignBedno(GetAssignno);
@@ -331,7 +332,7 @@ useEffect(() => {
 useEffect(() => {
   const packagedata = async () => 
   {
-      const packdata = await fetch(`http://localhost:4000/Package_modification`);
+      const packdata = await fetch(`${BASE_URL}/Package_modification`);
       const result = await packdata.json();
       const GetAssignno = result.map((item)=>item.AssignBedno);
       setGetAssign(GetAssignno);

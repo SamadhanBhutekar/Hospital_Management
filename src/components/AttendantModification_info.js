@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import maleimg from '../logo/malelogo.svg';
 import femalimg from '../logo/femalelogo.svg';
+import { BASE_URL } from "./config";
 
 function AttendantModification_info() {
   const { id } = useParams();
@@ -15,7 +16,7 @@ function AttendantModification_info() {
   };
 
   const getinfo = async () => {
-    const response = await fetch(`http://localhost:4000/attedentmodificationinfo/${id}`);
+    const response = await fetch(`${BASE_URL}/attedentmodificationinfo/${id}`);
     const data = await response.json();
     setTransactionData(data);
   };
@@ -24,7 +25,7 @@ function AttendantModification_info() {
     getinfo(); 
     const relationdata = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/get_attdent`);
+        const response = await fetch(`${BASE_URL}/get_attdent`);
         const data = await response.json();
         setRelationaldata(data);
       } catch (error) {

@@ -3,7 +3,7 @@ import '../components/css/login.css';
 import loginlogo from '../logo/indexlogo.png';
 import logo from '../logo/sidebarlogo.png';
 import { useNavigate } from 'react-router-dom';
-
+import { BASE_URL } from "./config";
 const Login = () =>
 {
   const [username, setUsername] = useState("");
@@ -24,7 +24,7 @@ const Login = () =>
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:4000/login", {
+      const response = await fetch(`${BASE_URL}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }), 

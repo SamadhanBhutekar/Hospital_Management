@@ -7,6 +7,7 @@ import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import { useNavigate } from 'react-router';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import { BASE_URL } from "./config";
 
 function Report_List() 
 {
@@ -37,7 +38,7 @@ function Report_List()
   useEffect(() => {
   const ReportList = async () => {
     try {
-      const response = await fetch('http://localhost:4000/report_list');
+      const response = await fetch(`${BASE_URL}/report_list`);
       const data = await response.json();
       setAttendanceData(data);
       fetchTransactionData(data.map(({ _id }) => _id)); 
@@ -51,7 +52,7 @@ function Report_List()
 
   const fetchTransactionData = async (ids) => {
     try {
-      const response = await fetch('http://localhost:4000/report_transction');
+      const response = await fetch(`${BASE_URL}/report_transction`);
       const transactionData = await response.json();
       const filteredTransactions = transactionData.filter((tran) => ids.includes(tran.resid));
       setTransactionData(filteredTransactions);

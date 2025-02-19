@@ -5,6 +5,7 @@ import Room_Reservation from "./Room_Reservation";
 import Dashboard_card from './Dashbord_Card'
 import notfoundimage from '../logo/notfound.svg'
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import { BASE_URL } from "./config";
 
 function Dashboard() {
   const [isActive, setIsActive] = useState(true);
@@ -19,7 +20,7 @@ function Dashboard() {
   const navigate = useNavigate();
   const [activeButton, setActiveButton] = useState("Booking"); 
   const [showModal, setModel] = useState(false);
-
+  console.log(BASE_URL);
   const handleButtonClick = (buttonName, action) => 
   {
     setActiveButton(buttonName); 
@@ -46,8 +47,8 @@ function Dashboard() {
   const CheckedPatients = async () => {
     try {
       const [reservationRes, patientRes] = await Promise.all([
-        fetch("http://localhost:4000/reservation_charges"),
-        fetch("http://localhost:4000/registration_reserved_patient"),
+        fetch(`${BASE_URL}/reservation_charges`),
+        fetch(`${BASE_URL}/registration_reserved_patient`),
       ]);
   
       if (!reservationRes.ok || !patientRes.ok) {
@@ -91,8 +92,8 @@ function Dashboard() {
   const ReserverPatient = async () => {
     try {
       const [reservationRes, patientRes] = await Promise.all([
-        fetch("http://localhost:4000/reservation_charges"),
-        fetch("http://localhost:4000/registration_reserved_patient"),
+        fetch(`${BASE_URL}/reservation_charges`),
+        fetch(`${BASE_URL}/registration_reserved_patient`),
       ]);
   
       if (!reservationRes.ok || !patientRes.ok) {
@@ -134,7 +135,7 @@ function Dashboard() {
   useEffect(() => {
     const patientdata = async () => {
       try {
-        let response = await fetch('http://localhost:4000/patient_registration_api');
+        let response = await fetch(`${BASE_URL}/patient_registration_api`);
         if (!response.ok) {
           throw new Error("Error Api");
         }
@@ -156,7 +157,7 @@ function Dashboard() {
   useEffect(() => {
     const getattdentdata = async () => {
       try {
-        let response = await fetch('http://localhost:4000/chckedattdent');
+        let response = await fetch(`${BASE_URL}/chckedattdent`);
         if (response.status === 404) {
           console.warn('No Record');
           setAttdentData([]); 
@@ -191,9 +192,9 @@ function Dashboard() {
   }, [getid, attdentData]);
   return (
     <>
-      <Sidebar isActive={isActive} handleToggle={handleToggle} />
-      <div id="page-container" className={isActive ? 'sidebar-open' : 'sidebar-closed'}>
-       <Dashboard_card/>
+  <Sidebar isActive={isActive} handleToggle={handleToggle} />
+    <div id="page-container" className={isActive ? 'sidebar-open' : 'sidebar-closed'}>
+    <Dashboard_card/>
     <div className="container dashboard-section2">
       <div className="col-md-3">
         <div className={`contenttitle card1 ${activeButton === "Booking" ? "active" : ""}`}>

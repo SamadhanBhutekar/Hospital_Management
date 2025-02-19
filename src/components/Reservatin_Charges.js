@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import checkicon from '../logo/checkbox-icon.svg'
 import { Link } from "react-router";
 import moment  from "moment";
+import { BASE_URL } from "./config";
 
 function Reservatin_Charges() {
   const [isActive, setIsActive] = useState(true);
@@ -39,7 +40,7 @@ function Reservatin_Charges() {
   
   useEffect(() => {
     const patientdata = async () => {
-      const getdata = await fetch(`http://localhost:4000/res_charges/${id}`);
+      const getdata = await fetch(`${BASE_URL}/res_charges/${id}`);
       const result = await getdata.json();
       if (result.length > 0) {
         setPatientName(result[0].patientname);
@@ -247,7 +248,7 @@ const handleSubmit = async () =>
   };
 
   try {
-    const response = await fetch("http://localhost:4000/Package_reservation_charges", {
+    const response = await fetch(`${BASE_URL}/Package_reservation_charges`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

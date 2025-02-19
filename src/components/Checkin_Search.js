@@ -4,7 +4,8 @@ import Sidebar from './Sidebar';
 import maleimg from '../logo/malelogo.svg';
 import femalimg from '../logo/femalelogo.svg'
 import notfound from '../logo/notfound.svg'
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import { BASE_URL } from "./config";
 
 function Checkin_Search() {
   const [isActive, setIsActive] = useState(true);
@@ -26,7 +27,7 @@ function Checkin_Search() {
     }
   
     try {
-      const response = await fetch(`http://localhost:4000/checkin_search/${encodeURIComponent(search)}`);
+      const response = await fetch(`${BASE_URL}/checkin_search/${encodeURIComponent(search)}`);
       const result = await response.json();
       const patientid = result.map((item) => item.patientid);
       const reservedPatients = result.filter((item) => item.checkStatus !== "Check In");
@@ -39,7 +40,7 @@ function Checkin_Search() {
       }
   
       if (patientid.length > 0) {
-        const response2 = await fetch(`http://localhost:4000/search_registration/${patientid[0]}`);
+        const response2 = await fetch(`${BASE_URL}/search_registration/${patientid[0]}`);
         const data = await response2.json();
         const gender = data.map((item)=>item.gender)[0]
         setgender(gender);

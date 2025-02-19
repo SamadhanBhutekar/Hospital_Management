@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import moment from 'moment'
 import { Link } from "react-router";
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import { BASE_URL } from "./config";
 function CheckOut_AccountHistrory() 
 {
   const [isActive, setIsActive] = useState(true);
@@ -22,10 +23,10 @@ function CheckOut_AccountHistrory()
   useEffect(() => {
     const checkoutdata = async () => {
       try {
-        let allData = await fetch(`http://localhost:4000/checkout_transctiondetails`);
+        let allData = await fetch(`${BASE_URL}/checkout_transctiondetails`);
         let allTransactions = await allData.json();
 
-        let singleData = await fetch(`http://localhost:4000/checkout_transctiondetails/${id}`);
+        let singleData = await fetch(`${BASE_URL}/checkout_transctiondetails/${id}`);
         let transactionDetails = await singleData.json();
   
         if (!Array.isArray(allTransactions) || !transactionDetails._id) {
@@ -68,7 +69,7 @@ function CheckOut_AccountHistrory()
   {
     const paymentsettlement = async () =>
     {
-        let geatdata = await fetch(`http://localhost:4000/checkout_paysettelment/${id}`);
+        let geatdata = await fetch(`${BASE_URL}/checkout_paysettelment/${id}`);
         let paymentdata = await geatdata.json();
         const createtedtate =paymentdata.transcatonDate;
         const formattedDate = createtedtate ? moment(createtedtate).format("DD MMM YYYY") : "N/A";

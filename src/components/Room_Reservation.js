@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { BASE_URL } from "./config";
 
 function Room_Reservation() {
   const [activeSection, setActiveSection] = useState("General");
@@ -17,7 +18,7 @@ function Room_Reservation() {
   const getdata = async () => {
     try {
       const reservationdata = await fetch(
-        "http://localhost:4000/reservation_charges"
+        `${BASE_URL}/reservation_charges`
       );
       const data = await reservationdata.json();
       const occupiedBeds = data
@@ -37,7 +38,7 @@ function Room_Reservation() {
   const packagedata = async () => {
     try {
       const packdata = await fetch(
-        "http://localhost:4000/Package_modification"
+        `${BASE_URL}/Package_modification`
       );
       const result = await packdata.json();
       const assignedBeds = result.map((item) => item.AssignBedno);
@@ -51,7 +52,7 @@ function Room_Reservation() {
   const packgeModify = async () => {
     try {
       const packdata = await fetch(
-        "http://localhost:4000/Package_modification"
+        `${BASE_URL}/Package_modification`
       );
       const result = await packdata.json();
       const packageBeds = result

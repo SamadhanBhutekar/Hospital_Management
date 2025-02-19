@@ -3,6 +3,7 @@ import Sidebar from './Sidebar';
 import maleimg from '../logo/malelogo.svg';
 import femalimg from '../logo/femalelogo.svg';
 import { Link,useParams } from 'react-router-dom';
+import { BASE_URL } from "./config";
 
 function Reservation_Confirmation() {
   const [isActive, setIsActive] = useState(true);
@@ -24,7 +25,7 @@ function Reservation_Confirmation() {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:4000/resconfiguration/${search}`);
+      const response = await fetch(`${BASE_URL}/resconfiguration/${search}`);
       const result = await response.json();
       const getid = result.map((item) => item._id)[0];
       setId(getid);
@@ -49,7 +50,7 @@ function Reservation_Confirmation() {
 
   useEffect(() => {
     const getreservation = async () => {
-      let data = await fetch(`http://localhost:4000/checkout_transctiondetails`);
+      let data = await fetch(`${BASE_URL}/checkout_transctiondetails`);
       const response = await data.json();
       const status = response.map((item) => item.ReservationStatus)[0];
       const pid = response.map((item) => item.patientid)[0];
