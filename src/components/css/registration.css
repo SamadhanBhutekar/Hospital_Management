@@ -1,0 +1,335 @@
+
+.form_wrapper {
+  width: 900px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 25px;
+  z-index: 1;
+  border-radius: 12px;
+  transform-origin: 50% 0%;
+  margin-top: 130px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background-color:  #0c1a32;;
+  background-clip: border-box;
+}
+
+.form_wrapper h2 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin: 0;
+  color: #94a3b8;
+}
+
+.title_container {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.form_wrapper .from_section {
+  width: 50%;
+  float: left;
+}
+
+.formlabel{
+  margin-bottom: 5px;
+  color: #94a3b8;
+  /* margin: 3px; */
+}
+.star
+{
+  color: red;
+}
+.form_wrapper .input_field {
+  position: relative;
+  margin-bottom: 15px;
+  animation: bounce 0.6s ease-out;
+}
+.input_field1{
+  position: relative;
+  margin-bottom: 10px;
+  animation: bounce 0.6s ease-out;
+}
+.input_field1 textarea{
+  width: 100%;
+  padding: 8px 10px 9px 35px;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.30s ease-in-out;
+  border-radius: 5px;
+  background-color: #0c1a32;
+  color: #b5b5c3;
+}
+input[type="checkbox"]{
+  margin-right:10px !important;
+}
+
+.form_wrapper span {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  color:#94a3b8;
+  height: 100%;
+  text-align: center;
+  width: 30px;
+}
+.disradio{
+  margin-right: 10px;
+  margin-left:10px;
+}
+.disinput{
+  padding: 8px 10px 9px 5px;
+  height: 35px;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.30s ease-in-out;
+  border-radius: 5px;
+  background-color: #0c1a32;
+  color: #b5b5c3;
+  margin-left:109px;
+  width: 363px;
+  margin-top: 12px;
+}
+.paymentradio{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.paymentcard{
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+
+}
+.paymentcard1{
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  padding:5px;
+  border-radius: 5px;
+}
+.rupees{
+
+  color:#94a3b8;
+  margin-left: 20px;
+  text-align: center;
+  width: 30px;
+}
+.addressicon{
+  position: absolute;
+  left: 0;
+  top: 4px;
+  color:#94a3b8;
+  height: 100%;
+  text-align: center;
+  width: 30px;
+  margin-left: 12px;
+}
+
+input::file-selector-button {
+  color:#94a3b8;
+  border: 1px solid #94a3b8;
+  background-color:#0c1a32 !important;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.form_wrapper input[type="date"]
+{
+ 
+  width: 100%;
+  padding:  4px 6px 9px 35px;;
+  height: 35px;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.30s ease-in-out;
+  border-radius: 5px;
+  background-color: #0c1a32;
+  color: #b5b5c3;
+}
+.form_wrapper input[type="text"],
+.form_wrapper input[type="email"],
+.form_wrapper input[type="password"],
+
+.form_wrapper input[type="tel"]  
+{
+  width: 100%;
+  padding: 8px 10px 9px 35px;
+  height: 35px;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.30s ease-in-out;
+  border-radius: 5px;
+  background-color: #0c1a32;
+  color: #b5b5c3;
+}
+
+.form_wrapper input[type="text"]:focus,
+.form_wrapper input[type="email"]:focus,
+.form_wrapper input[type="password"]:focus {
+  box-shadow: -7.829px 11.607px 21px 0px rgba(25, 42, 70, 0.13);
+  border: 1px solid #20304c;
+}
+
+.form_wrapper input[type="submit"] {
+  background: #f5ba1a;
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  transition: all 0.30s ease-in-out;
+}
+
+.form_wrapper input[type="submit"]:hover,
+.form_wrapper input[type="submit"]:focus {
+  background: #e0a017;
+}
+
+.form_container .row .from_section.last {
+  border-left: 1px solid #cccccc;
+}
+
+.checkbox_option label {
+  margin-right: 1em;
+  position: relative;
+}
+
+.form_wrapper .radio_option label {
+  margin-right: 20px;
+}
+
+.form_wrapper .radio_option label:before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 0.5em;
+  border-radius: 100%;
+  vertical-align: -3px;
+  border: 2px solid #cccccc;
+  padding: 0.15em;
+  background-color: transparent;
+  background-clip: content-box;
+  transition: all 0.2s ease;
+}
+
+.form_wrapper input[type="radio"]:hover + label:before {
+  border-color: #000000;
+}
+
+.form_wrapper input[type="radio"]:checked + label:before {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.form_wrapper .select_option {
+  position: relative;
+  width: 100%;
+  
+}
+
+.form_wrapper .select_option select {
+  display: inline-block;
+  width: 100%;
+  height: 35px;
+  padding: 0px 15px;
+  cursor: pointer;
+  color: #94a3b8 !important ;
+  border-color: rgba(255, 255, 255, 0.12);
+  background: #fff;
+  appearance: none;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+  height: calc(2.25rem + 2px);
+  font-weight: normal;
+  font-size: 0.875rem;
+  background-color: #0c1a32;
+  border-radius: 2px;
+  color: #ffffff;
+}
+
+.form_wrapper .select_option select:hover,
+.form_wrapper .select_option select:focus {
+  color: #000000;
+  border-color: #000000;
+  outline: none;
+  border: 1px solid #2c2e33;
+  height: calc(2.25rem + 2px);
+  font-weight: normal;
+  font-size: 0.875rem;
+  border-radius: 2px;
+  color: #ffffff;
+}
+.radiobtn{
+  margin: 5px;
+
+}
+.radioinput{
+  width: 100%;
+  padding: 3px 10px 9px 35px;
+  height: 35px;
+  border:1px solid rgba(255, 255, 255, 0.12);
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.30s ease-in-out;
+  border-radius: 5px;
+  background-color: #0c1a32;
+  color: #b5b5c3;
+  
+}
+.registration-btn button {
+  width: 100px;
+}
+@media screen and (max-width: 768px) {
+  .form_wrapper {
+    width: 100%;
+    padding: 15px;
+    margin-top: 80px;
+  }
+
+  .form_wrapper .from_section {
+    width: 100%;
+    float: none;
+  }
+
+  .form_wrapper input[type="text"],
+  .form_wrapper input[type="email"],
+  .form_wrapper input[type="password"],
+  .form_wrapper input[type="date"],
+  .form_wrapper input[type="tel"],
+  .disinput,
+  .form_wrapper textarea {
+    width: 100% !important; 
+    font-size: 12px; 
+  }
+  
+  .disinput {
+    margin-left: 0;
+  }
+
+  .registration-btn button {
+    width: 100px;
+  }
+  .form_wrapper .input_field
+  {
+    margin-bottom: 5px;
+  }
+  .formlabel{
+    font-size: 12px;
+  
+  }
+  .radiobtn{
+    margin: 5px;
+  }
+  .registration-btn  button{
+    margin: 10px;
+  }
+}
+
+
+
