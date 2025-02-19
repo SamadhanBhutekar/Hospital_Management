@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { BASE_URL } from "../components/config";
+import { BASE_URL } from "./config";
 
 function Room_Reservation() {
   const [activeSection, setActiveSection] = useState("General");

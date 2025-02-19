@@ -6,7 +6,7 @@ import femalimg from '../logo/femalelogo.svg';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import { Link } from 'react-router';
 import moment from 'moment';
-import { BASE_URL } from "../components/config";
+import { BASE_URL } from "./config";
 
 function Res_AccountDetails() {
   const [isActive, setIsActive] = useState(true);

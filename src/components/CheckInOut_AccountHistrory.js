@@ -5,7 +5,7 @@ import moment from 'moment'
 import { Link } from "react-router";
 import { useLocation } from "react-router-dom";
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-import { BASE_URL } from "../components/config";
+import { BASE_URL } from "./config";
 
 function CheckIn_AccountHistrory() 
 {

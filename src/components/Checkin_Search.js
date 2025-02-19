@@ -5,7 +5,7 @@ import maleimg from '../logo/malelogo.svg';
 import femalimg from '../logo/femalelogo.svg'
 import notfound from '../logo/notfound.svg'
 import {Link} from 'react-router-dom';
-import { BASE_URL } from "../components/config";
+import { BASE_URL } from "./config";
 
 function Checkin_Search() {
   const [isActive, setIsActive] = useState(true);

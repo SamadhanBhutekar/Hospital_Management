@@ -6,7 +6,7 @@ import femalimg from '../logo/femalelogo.svg';
 import checkicon from '../logo/checkbox-icon.svg'
 import { useNavigate } from "react-router";
 import "./css/card.css";
-import { BASE_URL } from "../components/config";
+import { BASE_URL } from "./config";
 
 const CheckIn = () => {
   const [checkdata, setCheckdata] = useState([]); 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Sidebar from "./Sidebar";
 import { useParams} from "react-router-dom";
 import { useNavigate } from "react-router";
-import { BASE_URL } from "../components/config";
+import { BASE_URL } from "./config";
 
 function Update_Attendant() {
   const [isActive, setIsActive] = useState(true);

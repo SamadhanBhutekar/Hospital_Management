@@ -5,7 +5,7 @@ import Room_Reservation from "./Room_Reservation";
 import Dashboard_card from './Dashbord_Card'
 import notfoundimage from '../logo/notfound.svg'
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-import { BASE_URL } from "../components/config";
+import { BASE_URL } from "./config";
 
 function Dashboard() {
   const [isActive, setIsActive] = useState(true);

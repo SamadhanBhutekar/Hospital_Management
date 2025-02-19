@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import maleimg from '../logo/malelogo.svg';
 import femalimg from '../logo/femalelogo.svg';
-import { BASE_URL } from "../components/config";
+import { BASE_URL } from "./config";
 
 function AttendantModification_info() {
  

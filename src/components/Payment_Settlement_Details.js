@@ -6,7 +6,7 @@ import { Link } from "react-router";
 import femalimg from "../logo/femalelogo.svg";
 import checkicon from "../logo/checkbox-icon.svg";
 import moment from "moment";
-import { BASE_URL } from "../components/config";
+import { BASE_URL } from "./config";
 
 const Payment_Settlement_Details = () => {
   const [checkdata, setCheckdata] = useState([]);

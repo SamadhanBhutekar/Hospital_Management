@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import checkicon from '../logo/checkbox-icon.svg'
 import { Link } from "react-router";
 import moment from 'moment';
-import { BASE_URL } from "../components/config";
+import { BASE_URL } from "./config";
 
 function Package_Reservatin_Charges() {
   const [isActive, setIsActive] = useState(true);
@@ -137,7 +137,7 @@ function Package_Reservatin_Charges() {
       const diffTime = Math.abs(to - from);
       const totalDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
       let remainingDays = totalDays;
-      if (remainingDays==0) 
+      if (remainingDays===0) 
       {
         totalCost=200;
       }

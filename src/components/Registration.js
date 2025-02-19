@@ -4,7 +4,7 @@ import "./css/registration.css";
 import { useParams } from "react-router";
 import { useNavigate } from 'react-router-dom';
 import checkicon from '../logo/checkbox-icon.svg';
-import { BASE_URL } from "../components/config";
+import { BASE_URL } from "./config";
 
 function Registration() {
   const [isActive, setIsActive] = useState(true);
@@ -531,7 +531,7 @@ const checkNumber = async (number, type) => {
       {showModal && (
         <div style={styles.modalOverlay}>
           <div style={styles.modal}>
-            <div style={styles.icon}><img src={checkicon} height={120} width={120} /></div>
+            <div style={styles.icon}><img alt="img" src={checkicon} height={120} width={120} /></div>
             <h4 style={{fontSize:"22px",marginTop:"20px"}}>Register Completed Successfully</h4>
             <h5 style={{fontSize:"16px",marginTop:"10px"}}>Registration Date : {chckedDate}</h5>
             <p style={{fontSize:"14px",marginTop:"10px"}}>Continue to complete the booking process...</p>

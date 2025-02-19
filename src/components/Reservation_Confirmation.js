@@ -3,7 +3,7 @@ import Sidebar from './Sidebar';
 import maleimg from '../logo/malelogo.svg';
 import femalimg from '../logo/femalelogo.svg';
 import { Link,useParams } from 'react-router-dom';
-import { BASE_URL } from "../components/config";
+import { BASE_URL } from "./config";
 
 function Reservation_Confirmation() {
   const [isActive, setIsActive] = useState(true);
