@@ -24,7 +24,7 @@ import Reportlist from './components/Report_List';
 import Monthwisereport from './components/Monthwise_Report'
 import Login from './components/login'
 import PrivateComponent from './components/PrivateComponent';
-import { BrowserRouter } from 'react-router';
+import { BrowserRouter } from "react-router-dom";
 function App() 
 {
   return (

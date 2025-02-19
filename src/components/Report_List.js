@@ -7,7 +7,7 @@ import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import { useNavigate } from 'react-router';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-import { BASE_URL } from "./config";
+import { BASE_URL } from "../components/config";
 
 function Report_List() 
 {

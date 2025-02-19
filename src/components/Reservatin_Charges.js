@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import checkicon from '../logo/checkbox-icon.svg'
 import { Link } from "react-router";
 import moment  from "moment";
-import { BASE_URL } from "./config";
+import { BASE_URL } from "../components/config";
 
 function Reservatin_Charges() {
   const [isActive, setIsActive] = useState(true);

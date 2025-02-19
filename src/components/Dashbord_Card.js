@@ -3,7 +3,7 @@ import generalbed from "../logo/generalbed.png";
 import semibed from "../logo/semibed.png";
 import specialbed from "../logo/specialbed.png";
 import React, { useState, useEffect } from 'react';
-import { BASE_URL } from "./config";
+import { BASE_URL } from "../components/config";
 function Dashbord_Card() 
 {
 

@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 import moment from 'moment'
 import { Link } from "react-router";
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-import { BASE_URL } from "./config";
+import { BASE_URL } from "../components/config";
 function CheckOut_AccountHistrory() 
 {
   const [isActive, setIsActive] = useState(true);

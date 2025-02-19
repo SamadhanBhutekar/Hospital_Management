@@ -4,7 +4,7 @@ import maleimg from "../logo/malelogo.svg";
 import femalimg from "../logo/femalelogo.svg";
 import notfound from "../logo/notfound.svg";
 import { Link } from "react-router-dom";
-import { BASE_URL } from "./config";
+import { BASE_URL } from "../components/config";
 
 function Transcation() {
   const [isActive, setIsActive] = useState(true);

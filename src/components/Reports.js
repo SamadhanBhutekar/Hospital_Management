@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import $ from 'jquery';
 import 'datatables.net';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-import { BASE_URL } from "./config";
+import { BASE_URL } from "../components/config";
 function Reports() {
   const [isActive, setIsActive] = useState(true);
   const [regdata,setResponse]=useState([]);

@@ -2,7 +2,6 @@ import React, { useState,useRef } from "react";
 import { Link, useNavigate } from "react-router";
 import logo from "../logo/sidebarlogo.png";
 import { useEffect } from "react";
-import { BASE_URL } from "./config";
 function Sidebar({ isActive, handleToggle }) 
 {
   const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);

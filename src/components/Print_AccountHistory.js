@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 import moment from "moment";
 import { useLocation } from "react-router-dom";
 import "react-tooltip/dist/react-tooltip.css";
-import { BASE_URL } from "./config";
+import { BASE_URL } from "../components/config";
 
 function Print_AccountHistory() {
   const [isActive, setIsActive] = useState(true);

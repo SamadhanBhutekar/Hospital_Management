@@ -4,7 +4,7 @@ import "./css/registration.css";
 import { useParams } from "react-router";
 import { useNavigate } from 'react-router-dom';
 import checkicon from '../logo/checkbox-icon.svg';
-import { BASE_URL } from "./config";
+import { BASE_URL } from "../components/config";
 
 function Registration() {
   const [isActive, setIsActive] = useState(true);

@@ -3,7 +3,7 @@ import '../components/css/login.css';
 import loginlogo from '../logo/indexlogo.png';
 import logo from '../logo/sidebarlogo.png';
 import { useNavigate } from 'react-router-dom';
-import { BASE_URL } from "./config";
+import { BASE_URL } from "../components/config";
 const Login = () =>
 {
   const [username, setUsername] = useState("");
