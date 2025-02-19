@@ -97,6 +97,7 @@ function Report_List()
       head: [tableColumn],
       body: tableRows,
       startY: 20,
+      styles: { halign: "center" }, 
     });
   
     doc.save('Revenue_Report.pdf');
