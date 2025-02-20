@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://admin-panel-vert-seven.vercel.app'; 
+export const BASE_URL = 'https://hospital-management-drab-zeta.vercel.app'; 
