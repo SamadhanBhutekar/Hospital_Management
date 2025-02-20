@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://localhost:4000'; // ✅ Named export
+export const BASE_URL = 'http://admin-panel-vert-seven.vercel.app'; 
