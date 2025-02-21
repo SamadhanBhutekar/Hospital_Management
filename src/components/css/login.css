@@ -1,0 +1,380 @@
+.logincontainer {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.logincontainer .forms-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.logincontainer .signin-signup {
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+
+}
+
+.logincontainer form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.logincontainer form.sign-up-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+.logincontainer form.sign-in-form {
+  z-index: 2;
+}
+
+.logincontainer .title {
+  font-size: 2.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.logincontainer .input-field {
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+
+
+.logincontainer .panels-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.logincontainer:before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 48%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(-45deg, #2EC4F2 20%, #3860AD 100%);
+  transition: 1.8s ease-in-out;
+  border-radius: 50%;
+  z-index: 6;
+}
+
+.logincontainer .image {
+  width: 100%;
+  transition: transform 1.1s ease-in-out;
+  transition-delay: 0.4s;
+}
+
+.logincontainer .panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  text-align: center;
+  z-index: 6;
+}
+
+.logincontainer .left-panel {
+  pointer-events: all;
+  padding: 3rem 17% 2rem 12%;
+}
+
+.logincontainer .right-panel {
+  pointer-events: none;
+  padding: 3rem 12% 2rem 17%;
+}
+
+.logincontainer .panel .content {
+  color: #fff;
+  transition: transform 0.9s ease-in-out;
+  transition-delay: 0.6s;
+}
+
+.logincontainer .panel h3 {
+  font-weight: 600;
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+.logincontainer .panel p {
+  font-size: 0.95rem;
+  padding: 0.7rem 0;
+}
+
+
+.right-panel .image,
+.right-panel .content {
+  transform: translateX(800px);
+}
+
+
+@media (min-width: 1400px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: unset !important;
+  }
+}
+
+.logincontainer .form {
+  border: 1px solid black;
+  width: 400px;
+  padding: 20px;
+  border-radius: 3%;
+}
+
+.logincontainer h3 {
+  text-align: center;
+}
+
+.logincontainer input:focus,
+input.form-control:focus {
+
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.logincontainer :active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+.logincontainer ::before,
+.logincontainer ::after {
+  position: absolute;
+  content: "";
+}
+
+.logincontainer .btn {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  background-color: unset !important;
+  border: 1px solid #3860AD !important;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 10px !important;
+  padding: unset !important;
+
+}
+
+.logincontainer .btn span {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  transition: 0.3s;
+  border-radius: 5px !important;
+  color: white;
+}
+
+.logincontainer .btn-1::before {
+  background-color: #3860AD;
+  transition: 0.3s ease-out;
+  color: black;
+  border-radius: 5px !important;
+}
+
+.logincontainer .logincontainer .logincontainer .btn-1 span {
+  color: white;
+  border: 1px solid rgb(28, 31, 30);
+  transition: 0.2s 0.1s;
+  border-radius: 5px !important;
+}
+
+.logincontainer .btn-1 span:hover {
+  color: #3860AD;
+  transition: 0.2s 0.1s;
+  border-radius: 5px !important;
+}
+
+.logincontainer .btn.hover-filled-slide-down::before {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+
+}
+
+.logincontainer .btn.hover-filled-slide-down:hover::before {
+  height: 0%;
+  border-radius: 5px !important;
+}
+
+@media (max-width: 768px) {
+  .logincontainer {
+    flex-direction: column;
+    height: 100px;
+    padding: 20px;
+    height: 70vh;
+  }
+
+  .from-img {
+    width: 200px !important;
+    height: 200px;
+    margin-top: -30px;
+  }
+
+  .logincontainer .forms-container {
+    height: auto;
+    top: 35%;
+    left: unset;
+  }
+
+  .logincontainer form {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .logincontainer .title {
+    font-size: 1.5rem;
+  }
+
+  .logincontainer .input-field {
+    max-width: 100%;
+    height: 50px;
+    grid-template-columns: 10% 90%;
+    padding: 0 1rem;
+  }
+
+  .logincontainer .panels-container {
+    grid-template-columns: 1fr;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .logincontainer .panel {
+    align-items: center;
+    text-align: center;
+    margin-top: -5%;
+  }
+
+  .logincontainer .panel .content {
+    transform: none;
+    transition: none;
+  }
+
+  .logincontainer .signin-signup {
+    top: 10%;
+    left: 0;
+    width: 95%;
+  }
+
+  .logincontainer.btn span {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+
+  .logincontainer .btn {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .logincontainer {
+    overflow-y: auto;
+    padding-top: 20px;
+  }
+
+  .logincontainer form {
+    padding: 0 1rem;
+  }
+
+  .logincontainer .form {
+    border: 1px solid black;
+    padding: 20px;
+    width: 330px;
+  }
+
+  .logincontainer .input-field {
+    max-width: 300px;
+    height: 50px;
+  }
+
+  .logincontainer .title {
+    font-size: 1.8rem;
+  }
+
+  .logincontainer .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .logincontainer .panel p {
+    font-size: 0.85rem;
+  }
+
+  .form-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .from-img {
+    width: 200px !important;
+    height: 200px;
+  }
+
+  .logincontainer::before {
+    content: "";
+    position: absolute;
+    height: 1050px;
+    width: 2000px;
+    top: 3%;
+    right: 48%;
+    transform: translateY(-50%);
+    background-image: linear-gradient(-45deg, #2EC4F2 20%, #3860AD 100%);
+    transition: 1.8s ease-in-out;
+    border-radius: 51%;
+    z-index: 6;
+  }
+
+}
