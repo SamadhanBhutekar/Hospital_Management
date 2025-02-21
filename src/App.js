@@ -24,15 +24,10 @@ import Reportlist from './components/Report_List';
 import Monthwisereport from './components/Monthwise_Report'
 import Login from './components/login'
 import PrivateComponent from './components/PrivateComponent';
-
-
-import { BrowserRouter } from 'react-router';
-
 function App() 
 {
   return (
   <>
-
     <Routes>
      <Route element={<PrivateComponent />}>
       <Route index element={<Dashboard/>} />
@@ -45,21 +40,6 @@ function App()
       <Route path="/attendantinfo/:id" element={<Attendantinfo/>}/>
       <Route path="/addAttendant/:id" element={<Add_attendant/>}/>
       <Route path="/update_attdence/:id" element={<Update_Attedence/>}/>
-
-   <BrowserRouter>
-    <Routes>
-    <Route element={<PrivateComponent />}>
-      <Route path="/" element={<Dashboard/>} />
-      <Route path='/registartion' element={<Register/>}></Route>
-      <Route path='/transction' element={<Transcation/>}></Route>
-      <Route path="/transactionHistory/:id" element={<ResaccountDeatils />}></Route>
-      <Route path="/reservation_confirmation/:roomId"  element={<Reservation_Confirmation />} />
-      <Route path="/reservation_charges/:roomId/:id"  element={<Reservation_Charges />}  />
-      <Route path='/attedence_modification' element={<Attedence_Modification/>}></Route>
-      <Route path="/attendantinfo/:id" element={<Attendantinfo/>}></Route>
-      <Route path="/addAttendant/:id" element={<Add_attendant/>}></Route>
-      <Route path="/update_attdence/:id" element={<Update_Attedence/>}></Route>
-
       <Route path="/package_modification" element={<Package_Modification/>} />
       <Route path="/packagemodificationinfo/:id" element={<Package_info/>}/>
       <Route path="/package_charges/:id" element={<Package_charges/>}/>
@@ -72,22 +52,12 @@ function App()
       <Route path="/CheckOutHistory/:id" element={<CheckOutaccHistory/>}/>
       <Route path="/reportlist" element={<Reportlist/>}/>
       <Route path="/monthwisereport" element={<Monthwisereport/>}/>
-
       </Route>
       <Route path="/login" element={<Login />} />
     </Routes>
   </>
   
-
-      
-      </Route>
-      <Route path="/login" element={<Login />} />
-    </Routes>
-    </BrowserRouter>
-  </>
-
   );
 }
 
 export default App;
-

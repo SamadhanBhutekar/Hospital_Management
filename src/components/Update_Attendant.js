@@ -5,10 +5,6 @@ import { useParams} from "react-router-dom";
 import { useNavigate } from "react-router";
 import { BASE_URL } from "./config";
 
-import { useParams, Link } from "react-router-dom";
-import { useNavigate } from "react-router";
-import {BASE_URL} from './config';
-
 
 function Update_Attendant() {
   const [isActive, setIsActive] = useState(true);
