@@ -4,11 +4,8 @@ import maleimg from "../logo/malelogo.svg";
 import femalimg from "../logo/femalelogo.svg";
 import notfound from "../logo/notfound.svg";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
+
 import { BASE_URL } from "./config";
-=======
-import {BASE_URL} from './config';
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 
 function Transcation() {
   const [isActive, setIsActive] = useState(true);
@@ -29,11 +26,9 @@ function Transcation() {
 
     try {
       const response = await fetch(
-<<<<<<< HEAD
+
         `${BASE_URL}/transaction/${encodeURIComponent(search)}`
-=======
-        `${BASE_URL}transaction/${encodeURIComponent(search)}`
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
       );
       const result = await response.json();
 

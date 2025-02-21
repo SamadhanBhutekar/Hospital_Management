@@ -5,12 +5,7 @@ import Room_Reservation from "./Room_Reservation";
 import Dashboard_card from './Dashbord_Card'
 import notfoundimage from '../logo/notfound.svg'
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-<<<<<<< HEAD
 import { BASE_URL } from "./config";
-=======
-import {BASE_URL} from './config';
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
-
 function Dashboard() {
   const [isActive, setIsActive] = useState(true);
   const [reservationdata, setReservationData] = useState([]);
@@ -24,11 +19,7 @@ function Dashboard() {
   const navigate = useNavigate();
   const [activeButton, setActiveButton] = useState("Booking"); 
   const [showModal, setModel] = useState(false);
-<<<<<<< HEAD
-  console.log(BASE_URL);
-=======
 
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
   const handleButtonClick = (buttonName, action) => 
   {
     setActiveButton(buttonName); 
@@ -55,13 +46,8 @@ function Dashboard() {
   const CheckedPatients = async () => {
     try {
       const [reservationRes, patientRes] = await Promise.all([
-<<<<<<< HEAD
         fetch(`${BASE_URL}/reservation_charges`),
         fetch(`${BASE_URL}/registration_reserved_patient`),
-=======
-        fetch(`${BASE_URL}reservation_charges`),
-        fetch(`${BASE_URL}registration_reserved_patient`),
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       ]);
   
       if (!reservationRes.ok || !patientRes.ok) {
@@ -105,13 +91,8 @@ function Dashboard() {
   const ReserverPatient = async () => {
     try {
       const [reservationRes, patientRes] = await Promise.all([
-<<<<<<< HEAD
         fetch(`${BASE_URL}/reservation_charges`),
         fetch(`${BASE_URL}/registration_reserved_patient`),
-=======
-        fetch(`${BASE_URL}reservation_charges`),
-        fetch(`${BASE_URL}registration_reserved_patient`),
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       ]);
   
       if (!reservationRes.ok || !patientRes.ok) {
@@ -153,11 +134,7 @@ function Dashboard() {
   useEffect(() => {
     const patientdata = async () => {
       try {
-<<<<<<< HEAD
         let response = await fetch(`${BASE_URL}/patient_registration_api`);
-=======
-        let response = await fetch(`${BASE_URL}patient_registration_api`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         if (!response.ok) {
           throw new Error("Error Api");
         }
@@ -179,11 +156,7 @@ function Dashboard() {
   useEffect(() => {
     const getattdentdata = async () => {
       try {
-<<<<<<< HEAD
         let response = await fetch(`${BASE_URL}/chckedattdent`);
-=======
-        let response = await fetch(`${BASE_URL}chckedattdent`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         if (response.status === 404) {
           console.warn('No Record');
           setAttdentData([]); 
@@ -218,15 +191,9 @@ function Dashboard() {
   }, [getid, attdentData]);
   return (
     <>
-<<<<<<< HEAD
-  <Sidebar isActive={isActive} handleToggle={handleToggle} />
-    <div id="page-container" className={isActive ? 'sidebar-open' : 'sidebar-closed'}>
-    <Dashboard_card/>
-=======
       <Sidebar isActive={isActive} handleToggle={handleToggle} />
       <div id="page-container" className={isActive ? 'sidebar-open' : 'sidebar-closed'}>
        <Dashboard_card/>
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
     <div className="container dashboard-section2">
       <div className="col-md-3">
         <div className={`contenttitle card1 ${activeButton === "Booking" ? "active" : ""}`}>

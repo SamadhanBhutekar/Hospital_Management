@@ -6,11 +6,8 @@ import { Link } from "react-router";
 import femalimg from "../logo/femalelogo.svg";
 import checkicon from "../logo/checkbox-icon.svg";
 import moment from "moment";
-<<<<<<< HEAD
+
 import { BASE_URL } from "./config";
-=======
-import {BASE_URL} from './config';
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 
 const Payment_Settlement_Details = () => {
   const [checkdata, setCheckdata] = useState([]);
@@ -46,11 +43,9 @@ const Payment_Settlement_Details = () => {
     const fetchPatientData = async () => {
       try {
         const response = await fetch(
-<<<<<<< HEAD
+
           `${BASE_URL}/payment_settlement/${id}`
-=======
-          `${BASE_URL}payment_settlement/${id}`
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
         );
         const result = await response.json();
         const fromDate = new Date(result.fromDate);
@@ -190,11 +185,9 @@ const Payment_Settlement_Details = () => {
     };
 
     try {
-<<<<<<< HEAD
+
       let insertdata = await fetch(`${BASE_URL}/payment_settelment`, {
-=======
-      let insertdata = await fetch(`${BASE_URL}payment_settelment`, {
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -211,11 +204,9 @@ const Payment_Settlement_Details = () => {
     }
 
     const status = await fetch(
-<<<<<<< HEAD
+
       `${BASE_URL}/change_status/${patientid}`,
-=======
-      `${BASE_URL}change_status/${patientid}`,
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
       {
         method: "PUT",
         headers: {
@@ -228,11 +219,9 @@ const Payment_Settlement_Details = () => {
     const result = await status.json();
 
     let packagestatus = await fetch(
-<<<<<<< HEAD
+
       `${BASE_URL}/package_status/${patientid}`,
-=======
-      `${BASE_URL}package_status/${patientid}`,
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
       {
         method: "PUT",
         headers: {

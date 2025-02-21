@@ -7,11 +7,9 @@ import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import { useNavigate } from 'react-router';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-<<<<<<< HEAD
+
 import { BASE_URL } from "./config";
-=======
-import {BASE_URL} from './config';
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
 function MonthReport_List() 
 {
   const [isActive, setIsActive] = useState(true);
@@ -33,11 +31,10 @@ function MonthReport_List()
   useEffect(() => {
     const ReportList = async () => {
       try {
-<<<<<<< HEAD
+
         const response = await fetch(`${BASE_URL}/report_list`);
-=======
-        const response = await fetch(`${BASE_URL}report_list`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
+
         const data = await response.json();
         if (data.length > 0) {
           const updatedData = data.map((item, index) => ({
@@ -56,11 +53,8 @@ function MonthReport_List()
   useEffect(() => {
     const fetchTransactionData = async () => {
       try {
-<<<<<<< HEAD
+
         const response = await fetch(`${BASE_URL}/report_transction`);
-=======
-        const response = await fetch(`${BASE_URL}report_transction`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         const transactionData = await response.json();
         const updatedTransactions = transactionData.map((item, index) => ({
           ...item,

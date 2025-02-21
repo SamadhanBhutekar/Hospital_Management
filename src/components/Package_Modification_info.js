@@ -3,11 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import maleimg from '../logo/malelogo.svg';
 import femalimg from '../logo/femalelogo.svg';
-<<<<<<< HEAD
+
 import { BASE_URL } from "./config";
-=======
-import {BASE_URL} from './config';
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 
 function AttendantModification_info() {
  
@@ -24,11 +21,9 @@ function AttendantModification_info() {
   };
 
   const getinfo = async () => {
-<<<<<<< HEAD
+
     const response = await fetch(`${BASE_URL}/attedentmodificationinfo/${id}`);
-=======
-    const response = await fetch(`${BASE_URL}attedentmodificationinfo/${id}`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
     const data = await response.json();
     setTransactionData(data);
   };
@@ -37,11 +32,10 @@ function AttendantModification_info() {
     getinfo(); 
     const relationdata = async () => {
       try {
-<<<<<<< HEAD
+
         const response = await fetch(`${BASE_URL}/get_attdent`);
-=======
-        const response = await fetch(`${BASE_URL}get_attdent`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
+
         const data = await response.json();
         const attdenceid =data.map((item)=>item.pid)[0];
         setattdenceid(attdenceid)

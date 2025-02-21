@@ -4,12 +4,9 @@ import { useParams } from "react-router";
 import moment from 'moment'
 import { Link } from "react-router";
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-<<<<<<< HEAD
-import { BASE_URL } from "./config";
-=======
-import {BASE_URL} from './config';
 
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+import { BASE_URL } from "./config";
+
 function CheckOut_AccountHistrory() 
 {
   const [isActive, setIsActive] = useState(true);
@@ -28,17 +25,11 @@ function CheckOut_AccountHistrory()
   useEffect(() => {
     const checkoutdata = async () => {
       try {
-<<<<<<< HEAD
+
         let allData = await fetch(`${BASE_URL}/checkout_transctiondetails`);
         let allTransactions = await allData.json();
 
         let singleData = await fetch(`${BASE_URL}/checkout_transctiondetails/${id}`);
-=======
-        let allData = await fetch(`${BASE_URL}checkout_transctiondetails`);
-        let allTransactions = await allData.json();
-
-        let singleData = await fetch(`${BASE_URL}checkout_transctiondetails/${id}`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         let transactionDetails = await singleData.json();
   
         if (!Array.isArray(allTransactions) || !transactionDetails._id) {
@@ -81,11 +72,8 @@ function CheckOut_AccountHistrory()
   {
     const paymentsettlement = async () =>
     {
-<<<<<<< HEAD
+
         let geatdata = await fetch(`${BASE_URL}/checkout_paysettelment/${id}`);
-=======
-        let geatdata = await fetch(`${BASE_URL}checkout_paysettelment/${id}`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         let paymentdata = await geatdata.json();
         const createtedtate =paymentdata.transcatonDate;
         const formattedDate = createtedtate ? moment(createtedtate).format("DD MMM YYYY") : "N/A";

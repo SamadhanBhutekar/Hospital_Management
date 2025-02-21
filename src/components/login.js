@@ -3,12 +3,9 @@ import '../components/css/login.css';
 import loginlogo from '../logo/indexlogo.png';
 import logo from '../logo/sidebarlogo.png';
 import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
-import { BASE_URL } from "./config";
-=======
-import {BASE_URL} from './config';
 
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+import { BASE_URL } from "./config";
+
 const Login = () =>
 {
   const [username, setUsername] = useState("");
@@ -29,11 +26,8 @@ const Login = () =>
     setLoading(true);
 
     try {
-<<<<<<< HEAD
+
       const response = await fetch(`${BASE_URL}/login`, {
-=======
-      const response = await fetch(`${BASE_URL}login`, {
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }), 

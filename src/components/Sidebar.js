@@ -2,11 +2,6 @@ import React, { useState,useRef } from "react";
 import { Link, useNavigate } from "react-router";
 import logo from "../logo/sidebarlogo.png";
 import { useEffect } from "react";
-<<<<<<< HEAD
-=======
-import {BASE_URL} from './config';
-
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 function Sidebar({ isActive, handleToggle }) 
 {
   const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
@@ -155,14 +150,9 @@ function Sidebar({ isActive, handleToggle })
 
       <div id="main-content" className={isActive ? "sidebar-open" : "sidebar-closed"}>
         <div id="header">
-<<<<<<< HEAD
-          <div className="activelabel" style={{display:"inline-block"}}>
-            <label className="" style={{color:"#94a3b8"}}>
-=======
          
           <div className="activelabel" style={{display:"inline-block"}}>
             <label className="mx-3" style={{color:"#94a3b8"}}>
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
                 {activePath === "/" ? "Late Dr. M. V. Govilkar Rugna Seva Sadan" : ""}
               </label>
               <label className="" style={{color:"#94a3b8"}}>

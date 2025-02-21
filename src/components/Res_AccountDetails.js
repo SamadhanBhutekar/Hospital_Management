@@ -6,11 +6,8 @@ import femalimg from '../logo/femalelogo.svg';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import { Link } from 'react-router';
 import moment from 'moment';
-<<<<<<< HEAD
+
 import { BASE_URL } from "./config";
-=======
-import {BASE_URL} from './config';
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 
 function Res_AccountDetails() {
   const [isActive, setIsActive] = useState(true);
@@ -33,11 +30,9 @@ function Res_AccountDetails() {
   {
     const fetchHistory = async () => 
     {
-<<<<<<< HEAD
+
       const response = await fetch(`${BASE_URL}/transactionHistory/${id}`);
-=======
-      const response = await fetch(`${BASE_URL}transactionHistory/${id}`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
       const data = await response.json();
       setTransactionData(data);
     } 
@@ -47,11 +42,8 @@ function Res_AccountDetails() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-<<<<<<< HEAD
+
         const response = await fetch(`${BASE_URL}/checkin_transctiondetails/${id}`);
-=======
-        const response = await fetch(`${BASE_URL}checkin_transctiondetails/${id}`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         const result = await response.json();
         setTransData(Array.isArray(result) ? result : [result]);
         setPatiebtid(result._id);
@@ -79,11 +71,8 @@ function Res_AccountDetails() {
       if (stopFetching) return; 
 
       try {
-<<<<<<< HEAD
+
         const response = await fetch(`${BASE_URL}/checkout_settelment/${pid}`);
-=======
-        const response = await fetch(`${BASE_URL}checkout_settelment/${pid}`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         if (!response.ok) {
           if (response.status === 404) {
             setPaySettdata([]); 

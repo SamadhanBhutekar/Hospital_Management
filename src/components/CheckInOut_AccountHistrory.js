@@ -5,12 +5,8 @@ import moment from 'moment'
 import { Link } from "react-router";
 import { useLocation } from "react-router-dom";
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-<<<<<<< HEAD
-import { BASE_URL } from "./config";
-=======
-import {BASE_URL} from './config';
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 
+import { BASE_URL } from "./config";
 function CheckIn_AccountHistrory() 
 {
   const [isActive, setIsActive] = useState(true);
@@ -36,17 +32,11 @@ function CheckIn_AccountHistrory()
       const currentDate = moment().format("DD MMM YYYY"); 
       setCurrendate(currentDate);
       try {
-<<<<<<< HEAD
+
         let checkialldata = await fetch(`${BASE_URL}/checkin_transctiondetails`);
         let chckindalldata = await checkialldata.json();
 
         let chcksingleData = await fetch(`${BASE_URL}/checkin_transctiondetails/${id}`);
-=======
-        let checkialldata = await fetch(`${BASE_URL}checkin_transctiondetails`);
-        let chckindalldata = await checkialldata.json();
-
-        let chcksingleData = await fetch(`${BASE_URL}checkin_transctiondetails/${id}`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         let chcecktransactionDetails = await chcksingleData.json();
   
         if (!Array.isArray(chckindalldata) || !chcecktransactionDetails.patientid) {
@@ -74,11 +64,8 @@ function CheckIn_AccountHistrory()
   useEffect(() => {
     const fetchModificationData = async () => {
       try {
-<<<<<<< HEAD
+
         const response = await fetch(`${BASE_URL}/Package_modificationData/${id}`);
-=======
-        const response = await fetch(`${BASE_URL}Package_modificationData/${id}`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         const data = await response.json();
         setStatus(data.status || ""); // Ensure status is always defined
       } catch (error) {

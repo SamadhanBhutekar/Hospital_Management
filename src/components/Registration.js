@@ -4,11 +4,9 @@ import "./css/registration.css";
 import { useParams } from "react-router";
 import { useNavigate } from 'react-router-dom';
 import checkicon from '../logo/checkbox-icon.svg';
-<<<<<<< HEAD
+
 import { BASE_URL } from "./config";
-=======
-import {BASE_URL} from './config';
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
 
 function Registration() {
   const [isActive, setIsActive] = useState(true);
@@ -50,11 +48,9 @@ const handleIdNumberChange = async (e) =>
   setIdNumber(newIdNumber);
 
   if (idproof && newIdNumber.length > 4) { 
-<<<<<<< HEAD
+
     const response = await fetch(`${BASE_URL}/check_idproof?idproof=${idproof}&idnumber=${newIdNumber}`);
-=======
-    const response = await fetch(`${BASE_URL}check_idproof?idproof=${idproof}&idnumber=${newIdNumber}`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
     const data = await response.json();
 
     if (data.exists) {
@@ -67,11 +63,9 @@ const handleIdNumberChange = async (e) =>
 const checkNumber = async (number, type) => {
 
   try {
-<<<<<<< HEAD
+
     let response = await fetch(`${BASE_URL}/check_patient?number=${number}`);
-=======
-    let response = await fetch(`${BASE_URL}check_patient?number=${number}`);
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
     let data = await response.json();
 
     if (data.exists) {
@@ -114,11 +108,9 @@ const checkNumber = async (number, type) => {
     formData.append("idnumber", idnumber);
     formData.append("file", IdImage);
   
-<<<<<<< HEAD
+
     let result = await fetch(`${BASE_URL}/patient_registration`, {
-=======
-    let result = await fetch(`${BASE_URL}patient_registration`, {
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
       method: "POST",
       body: formData,
     });
@@ -147,11 +139,9 @@ const checkNumber = async (number, type) => {
     formData.append("file", IdImage);
     formData.append("pid", id);
 
-<<<<<<< HEAD
+
     let result = await fetch(`${BASE_URL}/add_attdent`, {
-=======
-    let result = await fetch(`${BASE_URL}add_attdent`, {
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
       method: "POST",
       body: formData,
     });
@@ -551,11 +541,11 @@ const checkNumber = async (number, type) => {
       {showModal && (
         <div style={styles.modalOverlay}>
           <div style={styles.modal}>
-<<<<<<< HEAD
+
             <div style={styles.icon}><img alt="img" src={checkicon} height={120} width={120} /></div>
-=======
+
             <div style={styles.icon}><img src={checkicon} height={120} width={120} /></div>
->>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
+
             <h4 style={{fontSize:"22px",marginTop:"20px"}}>Register Completed Successfully</h4>
             <h5 style={{fontSize:"16px",marginTop:"10px"}}>Registration Date : {chckedDate}</h5>
             <p style={{fontSize:"14px",marginTop:"10px"}}>Continue to complete the booking process...</p>
