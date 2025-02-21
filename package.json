@@ -31,6 +31,10 @@
     "react-datepicker": "^7.6.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.1.1",
+<<<<<<< HEAD
+=======
+    "react-router-dom": "^7.2.0",
+>>>>>>> 00dd4b08095e2f769d57420573ebea817570fa71
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
     "react-spinners": "^0.15.0",
