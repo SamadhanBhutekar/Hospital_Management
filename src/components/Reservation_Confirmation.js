@@ -3,7 +3,11 @@ import Sidebar from './Sidebar';
 import maleimg from '../logo/malelogo.svg';
 import femalimg from '../logo/femalelogo.svg';
 import { Link,useParams } from 'react-router-dom';
+<<<<<<< HEAD
 import { BASE_URL } from "./config";
+=======
+import {BASE_URL} from './config';
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 
 function Reservation_Confirmation() {
   const [isActive, setIsActive] = useState(true);
@@ -25,7 +29,11 @@ function Reservation_Confirmation() {
       return;
     }
     try {
+<<<<<<< HEAD
       const response = await fetch(`${BASE_URL}/resconfiguration/${search}`);
+=======
+      const response = await fetch(`${BASE_URL}resconfiguration/${search}`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       const result = await response.json();
       const getid = result.map((item) => item._id)[0];
       setId(getid);
@@ -50,7 +58,11 @@ function Reservation_Confirmation() {
 
   useEffect(() => {
     const getreservation = async () => {
+<<<<<<< HEAD
       let data = await fetch(`${BASE_URL}/checkout_transctiondetails`);
+=======
+      let data = await fetch(`${BASE_URL}checkout_transctiondetails`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       const response = await data.json();
       const status = response.map((item) => item.ReservationStatus)[0];
       const pid = response.map((item) => item.patientid)[0];

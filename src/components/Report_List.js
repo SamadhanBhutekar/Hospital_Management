@@ -7,7 +7,11 @@ import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import { useNavigate } from 'react-router';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+<<<<<<< HEAD
 import { BASE_URL } from "./config";
+=======
+import {BASE_URL} from './config';
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 
 function Report_List() 
 {
@@ -38,7 +42,11 @@ function Report_List()
   useEffect(() => {
   const ReportList = async () => {
     try {
+<<<<<<< HEAD
       const response = await fetch(`${BASE_URL}/report_list`);
+=======
+      const response = await fetch(`${BASE_URL}report_list`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       const data = await response.json();
       setAttendanceData(data);
       fetchTransactionData(data.map(({ _id }) => _id)); 
@@ -52,7 +60,11 @@ function Report_List()
 
   const fetchTransactionData = async (ids) => {
     try {
+<<<<<<< HEAD
       const response = await fetch(`${BASE_URL}/report_transction`);
+=======
+      const response = await fetch(`${BASE_URL}report_transction`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       const transactionData = await response.json();
       const filteredTransactions = transactionData.filter((tran) => ids.includes(tran.resid));
       setTransactionData(filteredTransactions);
@@ -97,7 +109,10 @@ function Report_List()
       head: [tableColumn],
       body: tableRows,
       startY: 20,
+<<<<<<< HEAD
       styles: { halign: "center" }, 
+=======
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
     });
   
     doc.save('Revenue_Report.pdf');

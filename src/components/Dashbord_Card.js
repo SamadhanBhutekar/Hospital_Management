@@ -3,7 +3,11 @@ import generalbed from "../logo/generalbed.png";
 import semibed from "../logo/semibed.png";
 import specialbed from "../logo/specialbed.png";
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { BASE_URL } from "./config";
+=======
+import {BASE_URL} from './config';
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 function Dashbord_Card() 
 {
 
@@ -20,7 +24,11 @@ function Dashbord_Card()
   
   const getdata = async () => {
   try {
+<<<<<<< HEAD
     const response = await fetch(`${BASE_URL}/reservation_charges`);
+=======
+    const response = await fetch(`${BASE_URL}reservation_charges`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
     
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -58,7 +66,11 @@ function Dashbord_Card()
 
 const packagedata = async () => {
   try {
+<<<<<<< HEAD
     const response = await fetch(`${BASE_URL}/Package_modification`);
+=======
+    const response = await fetch(`${BASE_URL}Package_modification`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
@@ -77,7 +89,11 @@ const packagedata = async () => {
 
 const packgeModify = async () => {
   try {
+<<<<<<< HEAD
     const response = await fetch(`${BASE_URL}/Package_modification`);
+=======
+    const response = await fetch(`${BASE_URL}Package_modification`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -121,6 +137,11 @@ const packgeModify = async () => {
     console.error("Error fetching package modification data:", error);
   }
 };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
   useEffect(() => {
     getdata();
     packagedata();

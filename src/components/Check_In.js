@@ -6,7 +6,11 @@ import femalimg from '../logo/femalelogo.svg';
 import checkicon from '../logo/checkbox-icon.svg'
 import { useNavigate } from "react-router";
 import "./css/card.css";
+<<<<<<< HEAD
 import { BASE_URL } from "./config";
+=======
+import {BASE_URL} from './config';
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 
 const CheckIn = () => {
   const [checkdata, setCheckdata] = useState([]); 
@@ -28,7 +32,11 @@ const CheckIn = () => {
   useEffect(() => {
     const fetchPatientData = async () => {
       try {
+<<<<<<< HEAD
         const response = await fetch(`${BASE_URL}/checkin/${resid}`);
+=======
+        const response = await fetch(`${BASE_URL}checkin/${resid}`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         if (!response.ok) throw new Error("Failed to fetch data");
 
         const result = await response.json();
@@ -66,7 +74,11 @@ const CheckIn = () => {
   const handleCheckIn = async ()  =>
   {
     const checkStatus = "Check In";
+<<<<<<< HEAD
     let addcheckindata = await fetch(`${BASE_URL}/add_checkin/${resid}`,
+=======
+    let addcheckindata = await fetch(`${BASE_URL}add_checkin/${resid}`,
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
     {
        method:"PUT",
        body: JSON.stringify({ checkStatus}),
@@ -90,7 +102,11 @@ const CheckIn = () => {
   useEffect(() => {
       const getattdencedata = async () => {
         try {
+<<<<<<< HEAD
           const response = await fetch(`${BASE_URL}/get_attdent`);
+=======
+          const response = await fetch(`${BASE_URL}get_attdent`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
           const data = await response.json();
           const latestPatientName = data
           .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)) 
@@ -108,7 +124,11 @@ const CheckIn = () => {
     useEffect(() => {
       const patientdata = async () => {
         try {
+<<<<<<< HEAD
           const response2 = await fetch(`${BASE_URL}/search_registration/${id}`);
+=======
+          const response2 = await fetch(`${BASE_URL}search_registration/${id}`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
           const data = await response2.json();
           const gender = data.map((item) => item.gender)[0];
           console.log(gender)

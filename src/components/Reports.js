@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 import $ from 'jquery';
 import 'datatables.net';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+<<<<<<< HEAD
 import { BASE_URL } from "./config";
+=======
+import {BASE_URL} from './config';
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 function Reports() {
   const [isActive, setIsActive] = useState(true);
   const [regdata,setResponse]=useState([]);
@@ -15,7 +19,11 @@ useEffect (() =>
 {
   const registrationdata =  async () =>
   {
+<<<<<<< HEAD
     let data = await fetch(`${BASE_URL}/patient_registration`);
+=======
+    let data = await fetch(`${BASE_URL}patient_registration`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
     let response = await data.json();
     setResponse(response);
   }

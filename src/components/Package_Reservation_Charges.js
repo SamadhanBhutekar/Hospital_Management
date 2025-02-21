@@ -4,7 +4,11 @@ import { useNavigate, useParams } from "react-router-dom";
 import checkicon from '../logo/checkbox-icon.svg'
 import { Link } from "react-router";
 import moment from 'moment';
+<<<<<<< HEAD
 import { BASE_URL } from "./config";
+=======
+import {BASE_URL} from './config';
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 
 function Package_Reservatin_Charges() {
   const [isActive, setIsActive] = useState(true);
@@ -44,7 +48,11 @@ function Package_Reservatin_Charges() {
   useEffect(() => {
   const packagedata = async () => {
     try {
+<<<<<<< HEAD
       const response = await fetch(`${BASE_URL}/package_data/${id}`);
+=======
+      const response = await fetch(`${BASE_URL}package_data/${id}`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       const data = await response.json();
       const latestRoom = data.reduce((latest, current) => {
         return new Date(current.EntryDate) > new Date(latest.EntryDate) ? current : latest;
@@ -60,7 +68,11 @@ function Package_Reservatin_Charges() {
   useEffect(() => {
     const getdata = async () => 
     {
+<<<<<<< HEAD
         const fetchdata = await fetch(`${BASE_URL}/print_transctiondetails/${id}`);
+=======
+        const fetchdata = await fetch(`${BASE_URL}print_transctiondetails/${id}`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         const response = await fetchdata.json();
         const RoomCat = response.map((item)=>item.RoomCategory)[0];
         const totalAmt = response.map((item)=>item.totalAmount)[0];
@@ -73,7 +85,11 @@ function Package_Reservatin_Charges() {
 
   useEffect(() => {
     const patientdata = async () => {
+<<<<<<< HEAD
       const getdata = await fetch(`${BASE_URL}/res_charges/${id}`);
+=======
+      const getdata = await fetch(`${BASE_URL}res_charges/${id}`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       const result = await getdata.json();
 
       if (result.length > 0) {
@@ -137,7 +153,11 @@ function Package_Reservatin_Charges() {
       const diffTime = Math.abs(to - from);
       const totalDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
       let remainingDays = totalDays;
+<<<<<<< HEAD
       if (remainingDays===0) 
+=======
+      if (remainingDays==0) 
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       {
         totalCost=200;
       }
@@ -297,7 +317,11 @@ const submit = async () => {
     };
 
   try {
+<<<<<<< HEAD
     const resrvationdata = await fetch(`${BASE_URL}/packagemodification`, {
+=======
+    const resrvationdata = await fetch(`${BASE_URL}packagemodification`, {
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -321,7 +345,11 @@ const handleCloseModal = () => {
 useEffect(() => {
   const patienreg = async () => 
   {
+<<<<<<< HEAD
       const fetchdata = await fetch(`${BASE_URL}/checkin_transctiondetails`);
+=======
+      const fetchdata = await fetch(`${BASE_URL}checkin_transctiondetails`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       const response = await fetchdata.json();
       const GetAssignno = response.map((item)=>item.AssignBedno);
      setGetAssignBedno(GetAssignno);
@@ -332,7 +360,11 @@ useEffect(() => {
 useEffect(() => {
   const packagedata = async () => 
   {
+<<<<<<< HEAD
       const packdata = await fetch(`${BASE_URL}/Package_modification`);
+=======
+      const packdata = await fetch(`${BASE_URL}Package_modification`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       const result = await packdata.json();
       const GetAssignno = result.map((item)=>item.AssignBedno);
       setGetAssign(GetAssignno);

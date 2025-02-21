@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "./Sidebar";
+<<<<<<< HEAD
 import { useParams} from "react-router-dom";
 import { useNavigate } from "react-router";
 import { BASE_URL } from "./config";
+=======
+import { useParams, Link } from "react-router-dom";
+import { useNavigate } from "react-router";
+import {BASE_URL} from './config';
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 
 function Update_Attendant() {
   const [isActive, setIsActive] = useState(true);
@@ -29,7 +35,11 @@ function Update_Attendant() {
 
     const fetchAttendants = async () => {
       try {
+<<<<<<< HEAD
         let response = await fetch(`${BASE_URL}/patientdata`);
+=======
+        let response = await fetch(`${BASE_URL}patientdata`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         let result = await response.json();
         const filteredAttendants = result.filter(
           (item) => String(item.pid) === String(id)
@@ -45,7 +55,11 @@ function Update_Attendant() {
 
   const handleSave = async () => {
     const response = await fetch(
+<<<<<<< HEAD
       `${BASE_URL}/update-attendant/${selectedAttendant._id}`,
+=======
+      `${BASE_URL}update-attendant/${selectedAttendant._id}`,
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       {
         method: "PUT",
         headers: {

@@ -5,7 +5,11 @@ import maleimg from '../logo/malelogo.svg';
 import femalimg from '../logo/femalelogo.svg'
 import notfound from '../logo/notfound.svg'
 import {Link} from 'react-router-dom';
+<<<<<<< HEAD
 import { BASE_URL } from "./config";
+=======
+import {BASE_URL} from './config';
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 
 function Checkin_Search() {
   const [isActive, setIsActive] = useState(true);
@@ -27,7 +31,11 @@ function Checkin_Search() {
     }
   
     try {
+<<<<<<< HEAD
       const response = await fetch(`${BASE_URL}/checkin_search/${encodeURIComponent(search)}`);
+=======
+      const response = await fetch(`${BASE_URL}checkin_search/${encodeURIComponent(search)}`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       const result = await response.json();
       const patientid = result.map((item) => item.patientid);
       const reservedPatients = result.filter((item) => item.checkStatus !== "Check In");
@@ -40,7 +48,11 @@ function Checkin_Search() {
       }
   
       if (patientid.length > 0) {
+<<<<<<< HEAD
         const response2 = await fetch(`${BASE_URL}/search_registration/${patientid[0]}`);
+=======
+        const response2 = await fetch(`${BASE_URL}search_registration/${patientid[0]}`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         const data = await response2.json();
         const gender = data.map((item)=>item.gender)[0]
         setgender(gender);

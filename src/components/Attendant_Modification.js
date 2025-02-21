@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 import $ from 'jquery';
 import 'datatables.net';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+<<<<<<< HEAD
 import { BASE_URL } from "./config";
+=======
+import {BASE_URL} from './config';
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
 function AttendantModification() 
 {
   const [isActive, setIsActive] = useState(true);
@@ -19,7 +23,11 @@ function AttendantModification()
 
   const fetchAttendance = async () => {
     try {
+<<<<<<< HEAD
       const response = await fetch(`${BASE_URL}/attedentmodification`);
+=======
+      const response = await fetch(`${BASE_URL}attedentmodification`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
       const data = await response.json();
       setAttendanceData(data);
       const allPids = data.map((item) => item._id);
@@ -37,7 +45,11 @@ function AttendantModification()
   useEffect(() => {
     const getattdencedata = async () => {
       try {
+<<<<<<< HEAD
         const response = await fetch(`${BASE_URL}/get_attdent`);
+=======
+        const response = await fetch(`${BASE_URL}get_attdent`);
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
         const data = await response.json();
         setRelationaldata(data);
         const gepatientData = data.map((item) => ({

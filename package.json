@@ -31,7 +31,11 @@
     "react-datepicker": "^7.6.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.1.1",
+<<<<<<< HEAD
     "react-router-dom": "^7.2.0",
+=======
+    "react-router-dom": "^7.1.1",
+>>>>>>> 06e608edbc620353fb95abb3d4b3aef2a8f074c7
     "react-scripts": "5.0.1",
     "react-spinners": "^0.15.0",
     "react-super-responsive-table": "^6.0.1",
