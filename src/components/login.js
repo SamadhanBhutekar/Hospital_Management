@@ -11,7 +11,7 @@ const Login = () =>
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  // const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false); 
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Login = () =>
 
   const login = async (e) => {
     e.preventDefault();
-    // setLoading(true);
+    setLoading(true);
 
     try {
 
@@ -44,6 +44,9 @@ const Login = () =>
       setErrorMessage("Network error, please try again.");
       console.error("Network Error:", error);
     } 
+    finally {
+      setLoading(false); 
+    }
   };
 
   return (
@@ -67,9 +70,11 @@ const Login = () =>
                 <div className="mb-3 row mt-4">
                   <div className="col-12 loginbtn">
                     <center>
-                      <button type="submit" className="btn btn-1 hover-filled-slide-down" disabled={loading}>
-                        {loading ? <span>Loading...</span> : <span>Login</span>}
-                      </button>
+                      // <button type="submit" className="btn btn-1 hover-filled-slide-down" disabled={loading}>
+                      //   {loading ? <span>Loading...</span> : <span>Login</span>}
+                      // </button>
+                  <button type="submit" className="btn btn-1 hover-filled-slide-down">Login</button>
+
                     </center>
                   </div>
                 </div>
