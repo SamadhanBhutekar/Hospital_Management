@@ -76,6 +76,7 @@ const Login = () =>
                 </div>
               </div>
             </form>
+            <div><span>Username :- admin</span><span>Password :- admin123 </span></div>
           </div>
         </div>
         <div className="panels-container">
