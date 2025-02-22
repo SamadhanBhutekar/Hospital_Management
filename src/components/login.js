@@ -11,7 +11,7 @@ const Login = () =>
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [loading, setLoading] = useState(false); 
+  // const [loading, setLoading] = useState(false); 
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Login = () =>
 
   const login = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    // setLoading(true);
 
     try {
 
@@ -43,9 +43,7 @@ const Login = () =>
     } catch (error) {
       setErrorMessage("Network error, please try again.");
       console.error("Network Error:", error);
-    } finally {
-      setLoading(false); 
-    }
+    } 
   };
 
   return (
