@@ -254,16 +254,16 @@ const Dashbord = () => {
             <TooltipButton iconClass="fa fa-download" text="Download as PDF" onClick={exportToPDF} />
         </div>
           </div>
-          <div className='btnbackground'>
+          <div className='btnbackground' >
           <div className="button-group fiterbtn" >
-            <select onChange={(e) => setSelectedYear(parseInt(e.target.value))} className='select-filter1'>
+            <select onChange={(e) => setSelectedYear(parseInt(e.target.value))} className='select-filter1' style={{width:"90px"}}>
               {[...Array(6)].map((_, i) => {
                 const year = 2025 + i;
                 return <option key={year} value={year}>{year}</option>;
               })}
             </select>
 
-            <select onChange={(e) => setSelectedMonth(e.target.value)} className='select-filter1'>
+            <select onChange={(e) => setSelectedMonth(e.target.value)} className='select-filter1' style={{width:"90px"}}>
               <option value="all">All Months</option>
               {[...Array(12)].map((_, i) => {
                 const month = i + 1;
@@ -271,11 +271,11 @@ const Dashbord = () => {
               })}
             </select>
 
-            <select onChange={(e) => setSortOrder(e.target.value)} className='select-filter1'>
+            <select onChange={(e) => setSortOrder(e.target.value)} className='select-filter1' style={{width:"90px"}}>
               <option value="asc">Ascending</option>
               <option value="desc">Descending</option>
             </select>
-            <select onChange={(e) => setSortColumn(e.target.value)} className='select-filter1'>
+            <select onChange={(e) => setSortColumn(e.target.value)} className='select-filter1' style={{width:"90px"}}>
               <option value="all">All</option>
               <option value="reservationID">Reservation ID</option>
               <option value="patientname">Patient Name</option>
