@@ -130,11 +130,7 @@ function Print_AccountHistory() {
   const Modificationdata = async () => {
     try {
       const response = await fetch(
-
         `${BASE_URL}/Package_modificationData/${id}`
-
-        `${BASE_URL}Package_modificationData/${id}`
-
       );
       const data = await response.json();
       let getpackagePrice = data.packagePrice;
