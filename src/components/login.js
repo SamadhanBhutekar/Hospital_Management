@@ -70,7 +70,7 @@ const Login = () =>
                 <div className="mb-3 row mt-4">
                   <div className="col-12 loginbtn">
                     <center>
-                      <button type="submit" className="btn btn-1 hover-filled-slide-down"><span>Login<span></button>
+                      <button type="submit" className="btn btn-1 hover-filled-slide-down"><span>Login</span></button>
                     </center>
                   </div>
                 </div>
